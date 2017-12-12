@@ -597,7 +597,7 @@ $(function () {
         machine1.shuffle(10);
         machine2.shuffle(15);
         machine3.shuffle(20);
-        $('.randomizeMachine').css('padding-top','0.01rem');
+        $('.randomizeMachine').css('padding-top','0.03rem');
 
         //显示抽奖结果
         //@param machine1.active 当前选中索引
