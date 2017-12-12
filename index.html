@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>北京移动</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/imgLoader.js"></script>
+    <script>
+        imgLoader([
+            'images/firGirl.png',
+            'images/cloud.png',
+            'images/cloud_1.png',
+            'audio/music.svg',
+            'images/box_1.png',
+            'images/door.png',
+            'images/find_mobaihe.png',
+            'images/findWatch.png',
+            'images/firBtnBg.png',
+            'images/firPage_01.png',
+            'images/firPage_02.png',
+            'images/firPage_03.png',
+            'images/fenxiang.png',
+            'images/floor.png',
+            'images/guize_b.png',
+            'images/meigui_1.png',
+            'images/meigui_2.png',
+            'images/lingjiang.png',
+            'images/lingjiang_act.png',
+            'images/fuli_1.png',
+            'images/fuli_2.png',
+            'images/fuli_3.png',
+            'images/fuli_4.png',
+            'images/fuli_5.png',
+            'images/fuli_6.png',
+            'images/fuli_7.png',
+            'images/girl_1.png',
+            'images/girl_2.png',
+            'images/girl_3.png',
+            'images/guang_1.png',
+            'images/guang_2.png',
+            'images/innerBg.png',
+            'images/lev_4_1.png',
+            'images/lev_4_1_act.png',
+            'images/lev_4_bg.png',
+            'images/man.png',
+            'images/open_tv_1.png',
+            'images/open_tv_2.png',
+            'images/photo.png',
+            'images/repeatBg.png',
+            'images/snow.png',
+            'images/sofa.png',
+            'images/sxin_1.png',
+            'images/sxin_2.png',
+            'images/sxt_1.png',
+            'images/tc_1_icon.png',
+            'images/tc_2_icon.png',
+            'images/tc_3_icon.png',
+            'images/tc_4_icon.png',
+            'images/tc5_Bg.png',
+            'images/tc_5Btn_1.png',
+            'images/tc_5Btn_2.png',
+            'images/tc_5Title.png',
+            'images/tc_btn.png',
+            'images/tc_flower.png',
+            'images/tcStar.png',
+            'images/tcTitle_1.png',
+            'images/tcTitle_2.png',
+            'images/title1-1.png',
+            'images/title2-1.png',
+            'images/title3-1.png',
+            'images/title4-1.png',
+            'images/title5-1.png',
+            'images/tv.png',
+            'images/tv_act.png',
+            'images/watch.png',
+            'images/xin.png',
+            'images/xin_1.png',
+            'images/xin_2.png'
+        ], function (percentage) {
+            var percentT = percentage * 100;
+            $('#loader_info').html('Loading ' + (parseInt(percentT)) + '%');
+            $('#loader__progress')[0].style.width = percentT + '%';
+            var timerFly = setInterval(function () {
+                $('#fly').css('top','-3rem');
+                setTimeout(function () {
+                    $('#fly').css('top','-2rem');
+                },500);
+            },800);
+            if (percentage == 1) {
+                $('#loader').remove();
+                $('#info').show();
+                window.clearInterval(timerFly);
+            }
+        });
+    </script>
+</head>
+<body>
+<!--loading-->
+<div id="loader">
+    <div>
+        <div id="fly"></div>
+    </div>
+    <div id="loader_info"></div>
+    <div>
+        <div id="loader__progress"></div>
+    </div>
+    <div></div>
+</div>
+<!--MUSIC-->
+<div class="music" id="musicMenu">
+    <audio src="audio/music.mp3" preload="none" loop id="musicAudio"></audio>
+</div>
+<!--首页-->
+<section id="info">
+    <header>
+        <i id="hdgz">活动规则</i>
+    </header>
+    <footer>
+        <div>
+            <span id="xin_1"></span>
+            <span id="xin_2"></span>
+            <div id="xin_3">
+                <img src="./images/xin.png" alt="心">
+            </div>
+        </div>
+        <div></div>
+        <div>
+            <div>
+                <span id="starBtn"></span>
+                <i id="lookBtn">查看我的奖品</i>
+            </div>
+        </div>
+    </footer>
+</section>
+<!--闯关-->
+<section class="cgWrap">
+    <div>
+        <header id="title"></header>
+        <div class="barBox">
+            <div class="barWrap">
+                <span class="timer"><i id="time">20</i>S</span>
+                <div class="barInner"></div>
+            </div>
+        </div>
+        <footer>
+            <!--地板-->
+            <span></span>
+            <!--门-->
+            <span id="door"></span>
+            <!--相框-->
+            <span></span>
+            <!--电视-->
+            <span id="tv">
+                <i id="openTv"></i>
+            </span>
+            <!--女孩-->
+            <span id="girl_1"></span>
+            <!--魔百盒-->
+            <span id="box"></span>
+            <!--手表-->
+            <span id="watch"></span>
+            <!--摄像头-->
+            <span></span>
+            <!--沙发-->
+            <span></span>
+            <!--第四关背景-->
+            <span id="lev4Bg">
+                <i id="lev4"></i>
+                <i id="sxt"></i>
+            </span>
+            <!--第五关女孩-->
+            <span id="lev5Girl"></span>
+            <!--第五关大叔-->
+            <span id="lev5Man"></span>
+        </footer>
+    </div>
+    <div>
+        <span id="num">1</span>/5关
+    </div>
+</section>
+<!--活动规则-->
+<div class="hdgz">
+    <div>
+        <h2>活动规则</h2>
+        <p><i>1</i>:活动时间：2月10-2月24日</p>
+        <p><i>2</i>:活动介绍：：活动期间，用户参与北京移动“宝爸宝妈出逃计划”活动，通过3关后可获得抽奖机会，用户分享至朋友圈/微信好友，可在参与游戏一次。</p>
+        <p><i>3</i>:流量奖品规则：分100M、200M、500M、1024M、2.14GB档位。(活动仅限北京移动用户参与，需用户授权北京移动手机营业厅).</p>
+        <h3>流量奖品规则：</h3>
+        <p><i>1</i>:流量领取后，7天内自动充入用户的微信关注并绑定手机号，充入后立即有效，有效期7天。</p>
+        <p><i>2</i>:获赠流量使用优先级高于祝套餐及可选包，仅限北京本地使用，用户领取的赠送流量无法共享，未使用的流量无法结转。</p>
+        <p><i>3</i>:处于保留期、保号期、挂失、停机、欠停、转品牌过渡期的号无法领取奖励</p>
+        <p><i>4</i>:物联网卡、46元本地流量专享套餐卡、4G超级日租卡套餐、神州行开心听、语音套餐卡等无法获得流量赠送。</p>
+        <a id="gzPageBtn" href="javascript:void (0)">返回</a>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<!--我的奖品页-->
+<div class="myJp">
+    <div>
+        <h2>中奖纪录</h2>
+        <ul id="ljTab">
+            <li>
+                <span>1GB</span>
+                <i>2017-8-28</i>
+            </li>
+            <li>
+                <span>500M</span>
+                <i>2017-8-28</i>
+            </li>
+            <li class="act">
+                <span>2.14GB</span>
+                <i>2018-2-14</i>
+            </li>
+        </ul>
+        <a id="jpBtn" href="javascript:void (0)">返回</a>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<!--领取福利页面-->
+<div class="fuli">
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>快来领取福利</span>
+        <span></span>
+        <span>立即领取</span>
+        <span></span>
+        <span>立即领取</span>
+        <span></span>
+        <span>立即领取</span>
+    </div>
+</div>
+<!--分享遮罩层-->
+<div class="fenxiang">
+    <span></span>
+    <span id="fxqr">确认</span>
+</div>
+<!--遮罩层-->
+<div class="mask" id="mask"></div>
+<!--第一关弹窗-->
+<!--成功-->
+<div class="tc success" id="tc_success_1">
+    <div>
+        <div>
+            <p>解锁成功</p>
+            <p>恭喜你找到儿童手表，给宝宝带上，愉快地迎接下一关的挑战吧。</p>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div>
+        <span class="tc1NextBtn"></span>
+    </div>
+    <div></div>
+</div>
+<!--失败-->
+<div class="tc fail" id="tc_fail_1">
+    <div>
+        <div class="act">
+            <p>解锁失败</p>
+            <p>没有找到儿童手表，就差点运气呢，下一关我们江湖再见~</p>
+        </div>
+        <div class="act">
+            <span></span>
+            <span class="act"></span>
+            <span></span>
+        </div>
+    </div>
+    <div>
+        <span class="tc1NextBtn"></span>
+    </div>
+    <div class="act"></div>
+</div>
+<!--第二关弹窗-->
+<!--成功-->
+<div class="tc success" id="tc_success_2">
+    <div>
+        <div>
+            <p>解锁成功</p>
+            <P>恭喜你成功开启咪咕电视，咪咕让孩子每天都有趣</P>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span class="tc2Icon"></span>
+        </div>
+    </div>
+    <div>
+        <span class="tc2NextBtn"></span>
+    </div>
+    <div></div>
+</div>
+<!--失败-->
+<div class="tc fail" id="tc_fail_2">
+    <div>
+        <div class="act">
+            <p>解锁失败</p>
+            <p>很遗憾你没能打开咪咕电视，别放弃，机会就在下一关呢</p>
+        </div>
+        <div class="act">
+            <span></span>
+            <span class="act"></span>
+            <span class="tc2Icon"></span>
+        </div>
+    </div>
+    <div>
+        <span class="tc2NextBtn"></span>
+    </div>
+    <div class="act"></div>
+</div>
+<!--第三关弹窗-->
+<!--成功-->
+<div class="tc success" id="tc_success_3">
+    <div>
+        <div>
+            <p>解锁成功</p>
+            <p>恭喜你解锁魔百盒，千万/海量视频0卡顿，客厅也能尽享视听盛宴。</p>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span class="tc3Icon"></span>
+        </div>
+    </div>
+    <div>
+        <span class="tc3NextBtn"></span>
+    </div>
+    <div></div>
+</div>
+<!--失败-->
+<div class="tc fail" id="tc_fail_3">
+    <div>
+        <div class="act">
+            <p>解锁失败</p>
+            <p>很遗憾没有连线成功，下一关肯定难不倒你啦</p>
+        </div>
+        <div class="act">
+            <span></span>
+            <span class="act"></span>
+            <span class="tc3Icon"></span>
+        </div>
+    </div>
+    <div>
+        <span class="tc3NextBtn"></span>
+    </div>
+    <div class="act"></div>
+</div>
+<!--第四关弹窗-->
+<!--成功-->
+<div class="tc success" id="tc_success_4">
+    <div>
+        <div>
+            <p>解锁成功</p>
+            <p>恭喜你找到和目摄像头，清晰夜视、异动监测，孩子动向尽在掌握。</p>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span class="tc4Icon"></span>
+        </div>
+    </div>
+    <div>
+        <span class="tc4NextBtn"></span>
+    </div>
+    <div></div>
+</div>
+<!--失败-->
+<div class="tc fail" id="tc_fail_4">
+    <div>
+        <div class="act">
+            <p>解锁失败</p>
+            <p>没找到和目摄像头，那也没关系，我们去抽奖吧，好运爱你哦。</p>
+        </div>
+        <div class="act">
+            <span></span>
+            <span class="act"></span>
+            <span class="tc4Icon"></span>
+        </div>
+    </div>
+    <div>
+        <span class="tc4NextBtn"></span>
+    </div>
+    <div class="act"></div>
+</div>
+<!--第五关弹窗-->
+<div class="lev5Tc">
+    <div></div>
+    <div>
+        <div id="ll">1GB</div>
+        <span id="tc5lqBtn"></span>
+        <p>北京移动送您1张<span id="ll_">1GB</span>流量券<br>
+            祝您情人节快乐～</p>
+        <i>已获奖品可去我的奖品页面领取</i>
+    </div>
+    <div id="getMoreBtn">领取更多福利</div>
+    <div id="yqBtn">呼唤小伙伴</div>
+</div>
+</body>
+</html>
+<script src="js/jweixin-1.0.0.js"></script>
+<script src="js/index.js"></script>
