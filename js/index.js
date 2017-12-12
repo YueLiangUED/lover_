@@ -45,9 +45,7 @@ $(function () {
         $tc1NextBtn = $('.tc1NextBtn'),
         $tc2NextBtn = $('.tc2NextBtn'),
         $tc3NextBtn = $('.tc3NextBtn'),
-        $tc4Nextbtn = $('.tc4NextBtn'),
-        $ll = $('#ll'),
-        $ll_ = $('#ll_');
+        $tc4Nextbtn = $('.tc4NextBtn');
     //首页动画
     var timer1 = window.setTimeout(function () {
         $xin_1.fadeIn(function () {
@@ -408,12 +406,7 @@ $(function () {
         }
     });
 
-    //第五关弹窗随机获取流量
-    function getLL() {
-        var arr = ['100M','200M','500M','1GB','2.14G'],
-            index = Math.floor((Math.random()*arr.length));
-        return arr[index];
-    }
+
     //显示第一关成功弹窗
     function showTc_success_1() {
         setTimeout(function () {
@@ -508,8 +501,6 @@ $(function () {
     }
     //显示第五关弹窗
     function showTc_5() {
-        $ll.text(getLL());
-        $ll_.text($ll.text());
         $('.lev5Tc').show();
         $('#mask').css('opacity','.7');
         showMask();
@@ -571,4 +562,66 @@ $(function () {
         }
         window.setTimeout(controlMusic, 1000);
     }();
+
+    //老虎机抽奖
+
+    var random = Math.round(Math.random()*(5-1)+1),
+        $cishu = $('#cishu'),
+        $lqBtn = $('#lqBtn');
+    var machine1 = $("#machine1").slotMachine({
+        active: 0,
+        delay: 100,
+        randomize:function(){
+            return random;
+        }
+    });
+
+    var machine2 = $("#machine2").slotMachine({
+        active: 0,
+        delay: 150,
+        randomize:function(){
+            return random;
+        }
+    });
+
+    var machine3 = $("#machine3").slotMachine({
+        active: 0,
+        delay: 200,
+        randomize:function(){
+            return random;
+        }
+    });
+
+    $("#ranomizeButton").one('click',function () {
+        $cishu.text(0);
+        machine1.shuffle(10);
+        machine2.shuffle(15);
+        machine3.shuffle(20);
+
+
+        //显示抽奖结果
+        //@param machine1.active 当前选中索引
+        if(machine1.active === 0){
+
+        }else if(machine1.active ===1 ){
+
+        }else if(machine1.active ===2){
+
+        }else if(machine1.active ===3){
+
+        }
+    });
+    window.setInterval(function () {
+        if(machine3.stopping){
+            setTimeout(function () {
+                $lqBtn.addClass('act');
+            },800);
+        }
+    });
+    $lqBtn.on('click',function () {
+        if($(this).hasClass('act')){
+            $lqBtn.text('已领取');
+            $(this).removeClass('act');
+        }
+    });
 });

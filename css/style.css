@@ -826,53 +826,71 @@ i{
     left: 0;
     right: 0;
     margin: auto;
-    width: 5.73rem;
-    height: 1.94rem;
+    padding-top: 1.16rem;
+    box-sizing: border-box;
+    width: 6.13rem;
+    height: 2.07rem;
+    font-size: .42rem;
+    text-align: center;
+    color: #ffffff;
     background: url("../images/tc_5Title.png") center no-repeat;
     background-size: cover;
     z-index: 1;
 }
+.lev5Tc>div:nth-child(1) span{
+    color: #f7e521;
+}
 .lev5Tc>div:nth-child(2){
     position: relative;
     margin: 1.8rem auto 0;
-    width: 6.52rem;
-    height: 5.77rem;
-    background: url("../images/tc5_Bg.png") center no-repeat;
+    width: 6.33rem;
+    height: 4.57rem;
+    background: url("../images/laohuji.png") center no-repeat;
     background-size: cover;
 }
-.lev5Tc>div:nth-child(2) div:nth-child(1){
+.lev5Tc>div:nth-child(2)>div{
     position: absolute;
-    top: 1.15rem;
-    left: 2.2rem;
-    width: 2.5rem;
-    height: 1rem;
-    line-height: 1rem;
-    font-size: .82rem;
-    font-weight: bold;
-    color: #000000;
-    text-align: center;
-    border: 3px solid #090909;
-    border-radius: 2px;
-    background-color: #ffffff;
+    top: .6rem;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    margin: auto;
+    padding-top: .35rem;
+    width: 4.48rem;
+    height: 1.6rem;
+    background: url("../images/numBox.png") center no-repeat;
+    background-size: cover;
+}
+.lev5Tc>div:nth-child(2)>div>div{
+    float: left;
+    margin-right: .185rem;
+    box-sizing: border-box;
+    padding: 0 .24rem;
+    width: 1.37rem;
+    height: .89rem;
+    overflow: hidden;
+}
+.lev5Tc>div:nth-child(2)>div div:last-child{
+    margin-right: 0;
+}
+.lev5Tc>div:nth-child(2)>div div div{
+    width: .89rem;
+    height: .89rem;
 }
 .lev5Tc>div:nth-child(2) span:nth-child(2){
     position: absolute;
-    top: 2.85rem;
+    bottom: 1.1rem;
     left: 0;
     right: 0;
     margin: auto;
-    width: 2.52rem;
-    height: .83rem;
-    background: url("../images/tc_5Btn_1.png") center no-repeat;
-    background-size: cover;
-}
-.lev5Tc>div:nth-child(2) span:nth-child(2).act{
-    background: url("../images/tc_5Btn_2.png") center no-repeat;
+    width: .91rem;
+    height: .6rem;
+    background: url("../images/cjBtn.png") center no-repeat;
     background-size: cover;
 }
 .lev5Tc>div:nth-child(2) p:nth-child(3){
     position: absolute;
-    bottom: .2rem;
+    bottom: -.65rem;
     left: 0;
     right: 0;
     margin: auto;
@@ -888,7 +906,7 @@ i{
 }
 .lev5Tc>div:nth-child(2) i:nth-child(4){
     position: absolute;
-    bottom: -.2rem;
+    bottom: -1rem;
     left: 0;
     right: 0;
     margin: auto;
@@ -896,8 +914,29 @@ i{
     font-size: .26rem;
     color: #fffefe;
 }
+.lev5Tc>div:nth-child(2) span:nth-child(5){
+    position: absolute;
+    bottom: .22rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 2.1rem;
+    height: .5rem;
+    font-size: .24rem;
+    text-align: center;
+    line-height: .5rem;
+    border-radius: .2rem;
+    color: #888;
+    border: 2px solid #808080;
+    background-color: #cccccc;
+}
+.lev5Tc>div:nth-child(2) span:nth-child(5).act{
+    color: #000000;
+    border-color: #090909;
+    background-color: #feb6cf;
+}
 .lev5Tc>div:nth-child(3){
-    margin: 0.5rem auto;
+    margin: 1.5rem auto 0.5rem;
     width: 3.01rem;
     height: .71rem;
     font-size: .34rem;

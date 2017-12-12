@@ -7,6 +7,7 @@
     <title>北京移动</title>
     <link rel="stylesheet" href="css/reset.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.slotmachine.min.css">
     <script src="js/jquery-1.10.1.min.js"></script>
     <script src="js/imgLoader.js"></script>
     <script>
@@ -60,9 +61,14 @@
             'images/tc_2_icon.png',
             'images/tc_3_icon.png',
             'images/tc_4_icon.png',
-            'images/tc5_Bg.png',
-            'images/tc_5Btn_1.png',
-            'images/tc_5Btn_2.png',
+            'images/laohuji.png',
+            'images/numBox.png',
+            'images/0M.png',
+            'images/1GB.png',
+            'images/100M.png',
+            'images/200M.png',
+            'images/500M.png',
+            'images/2.14G.png',
             'images/tc_5Title.png',
             'images/tc_btn.png',
             'images/tc_flower.png',
@@ -397,13 +403,38 @@
 </div>
 <!--第五关弹窗-->
 <div class="lev5Tc">
-    <div></div>
+    <div>您有<span id="cishu">1</span>次抽奖机会</div>
     <div>
-        <div id="ll">1GB</div>
-        <span id="tc5lqBtn"></span>
-        <p>北京移动送您1张<span id="ll_">1GB</span>流量券<br>
-            祝您情人节快乐～</p>
+        <div>
+            <div id="machine1" class="randomizeMachine">
+                <div><img src="./images/0M.png" alt="0M"></div>
+                <div><img src="./images/100M.png" alt="100M"></div>
+                <div><img src="./images/200M.png" alt="200M"></div>
+                <div><img src="./images/500M.png" alt="500M"></div>
+                <div><img src="./images/1GB.png" alt="1GB"></div>
+                <div><img src="./images/2.14G.png" alt="2.14G"></div>
+            </div>
+            <div id="machine2" class="randomizeMachine">
+                <div><img src="./images/0M.png" alt="0M"></div>
+                <div><img src="./images/100M.png" alt="100M"></div>
+                <div><img src="./images/200M.png" alt="200M"></div>
+                <div><img src="./images/500M.png" alt="500M"></div>
+                <div><img src="./images/1GB.png" alt="1GB"></div>
+                <div><img src="./images/2.14G.png" alt="2.14G"></div>
+            </div>
+            <div id="machine3" class="randomizeMachine">
+                <div><img src="./images/0M.png" alt="0M"></div>
+                <div><img src="./images/100M.png" alt="100M"></div>
+                <div><img src="./images/200M.png" alt="200M"></div>
+                <div><img src="./images/500M.png" alt="500M"></div>
+                <div><img src="./images/1GB.png" alt="1GB"></div>
+                <div><img src="./images/2.14G.png" alt="2.14G"></div>
+            </div>
+        </div>
+        <span id="ranomizeButton"></span>
+        <p>北京移动祝您情人节快乐～</p>
         <i>已获奖品可去我的奖品页面领取</i>
+        <span id="lqBtn">立即领取</span>
     </div>
     <div id="getMoreBtn">领取更多福利</div>
     <div id="yqBtn">呼唤小伙伴</div>
@@ -411,4 +442,5 @@
 </body>
 </html>
 <script src="js/jweixin-1.0.0.js"></script>
+<script src="js/jquery.slotmachine.js"></script>
 <script src="js/index.js"></script>
