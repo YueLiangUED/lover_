@@ -233,6 +233,10 @@ section#info footer>div:nth-child(3){
     background: url("../images/firPage_03.png") center no-repeat;
     background-size: cover;
 }
+section#info footer>div:nth-child(3).bg{
+    background: url("../images/firPage_04.png") center no-repeat;
+    background-size: cover;
+}
 section#info footer>div:nth-child(3) div{
     position: absolute;
     left: 2.02rem;
@@ -745,31 +749,29 @@ i{
 }
 .tc>div:nth-child(1) div:nth-child(1){
     width: 100%;
-    height: 3.22rem;
-    border-bottom: 2px solid #090909;
+    height: 3rem;
     background-color: #fd97b3;
 }
 .tc>div:nth-child(1) div:nth-child(1) p:nth-child(1){
     position: absolute;
-    top: 1.55rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-    font-size: .3rem;
-    color: #ffffff;
+    left: -.6rem;
+    top: -.5rem;
+    width: 6.5rem;
+    height: 4.27rem;
+    background: url("../images/tc_xin.png") center no-repeat;
+    background-size: cover;
 }
 .tc>div:nth-child(1) div:nth-child(1) p:nth-child(2){
     position: absolute;
-    top: 2.1rem;
+    top: 1rem;
     left: 0;
     right: 0;
     margin: auto;
     padding: 0 .28rem;
-    font-size: .24rem;
+    font-size: .34rem;
     text-align: center;
     line-height: 1.5em;
-    color: #ffffff;
+    color: #000000;
 }
 .tc>div:nth-child(1) div:nth-child(1).act{
     background-color: #7cb6eb;
@@ -777,7 +779,7 @@ i{
 .tc>div:nth-child(1) div:nth-child(2){
     position: relative;
     width: 100%;
-    height: 2.1rem;
+    height: 2.37rem;
     background-color: #ff5e8a;
 }
 .tc>div:nth-child(1) div:nth-child(2).act{
@@ -810,33 +812,34 @@ i{
 
 .tc>div:nth-child(1) div:nth-child(2) span:nth-child(3){
     position: absolute;
-    top: .23rem;
+    top: -.6rem;
     left: 0;
     right: 0;
     margin: auto;
-    width: 1.63rem;
-    height: 1.07rem;
+    width: 2.62rem;
+    height: 1.72rem;
     background: url("../images/tc_1_icon.png") center no-repeat;
     background-size: cover;
 }
 .tc>div:nth-child(1) div:nth-child(2) span:nth-child(3).tc2Icon{
     left: .35rem;
-    top: .1rem;
-    width: 1.72rem;
-    height: 1.32rem;
+    top: -.8rem;
+    width: 2.57rem;
+    height: 1.97rem;
     background: url("../images/tc_2_icon.png") center no-repeat;
     background-size: cover;
 }
 .tc>div:nth-child(1) div:nth-child(2) span:nth-child(3).tc3Icon{
-    top: .3rem;
-    width: 1.63rem;
-    height: .99rem;
+    top: -.4rem;
+    width: 2.69rem;
+    height: 1.63rem;
     background: url("../images/tc_3_icon.png") center no-repeat;
     background-size: cover;
 }
 .tc>div:nth-child(1) div:nth-child(2) span:nth-child(3).tc4Icon{
-    width: .92rem;
-    height: 1.16rem;
+    top: -.8rem;
+    width: 1.51rem;
+    height: 1.91rem;
     background: url("../images/tc_4_icon.png") center no-repeat;
     background-size: cover;
 }
@@ -851,7 +854,7 @@ i{
 }
 .tc>div:nth-child(2) span{
     position: absolute;
-    bottom: .28rem;
+    bottom: .55rem;
     right: 1.85rem;
     width: 2.29rem;
     height: .59rem;
@@ -861,10 +864,10 @@ i{
 }
 .tc>div:nth-child(3){
     position: absolute;
-    top: -.7rem;
+    top: -1rem;
     left: .5rem;
-    width: 4.2rem;
-    height: 2.06rem;
+    width: 4.15rem;
+    height: 1.55rem;
     background: url("../images/tcTitle_1.png") center no-repeat;
     background-size: cover;
 }
@@ -876,7 +879,7 @@ i{
 .lev5Tc{
     display: none;
     position: fixed;
-    top: 5%;
+    top: 25%;
     left: 0;
     right: 0;
     margin: auto;
@@ -949,23 +952,8 @@ i{
     background: url("../images/cjBtn.png") center no-repeat;
     background-size: cover;
 }
-.lev5Tc>div:nth-child(2) p:nth-child(3){
-    position: absolute;
-    bottom: -.9rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    font-size: .33rem;
-    line-height: 2.5em;
-    text-align: center;
-    color: #fffefe;
-}
-.lev5Tc>div:nth-child(2) p:nth-child(3) span{
-    font-size: .6rem;
-    font-weight: bold;
-    color: #7cb6eb;
-}
-.lev5Tc>div:nth-child(2) i:nth-child(4){
+
+.lev5Tc>div:nth-child(2) i:nth-child(3){
     position: absolute;
     bottom: -1.2rem;
     left: 0;
@@ -975,7 +963,7 @@ i{
     font-size: .26rem;
     color: #fffefe;
 }
-.lev5Tc>div:nth-child(2) span:nth-child(5){
+.lev5Tc>div:nth-child(2) span:nth-child(4){
     position: absolute;
     bottom: .22rem;
     left: 0;
@@ -991,11 +979,12 @@ i{
     border: 2px solid #808080;
     background-color: #cccccc;
 }
-.lev5Tc>div:nth-child(2) span:nth-child(5).act{
+.lev5Tc>div:nth-child(2) span:nth-child(4).act{
     color: #000000;
     border-color: #090909;
     background-color: #feb6cf;
 }
+/**/
 .lev5Tc>div:nth-child(3){
     margin: 1.5rem auto 0.5rem;
     width: 3.01rem;
@@ -1008,18 +997,7 @@ i{
     border-radius: .2rem;
     background-color: #7cb6eb;
 }
-.lev5Tc>div:nth-child(4){
-    margin: -.2rem auto;
-    width: 1.9rem;
-    height: .53rem;
-    font-size: .26rem;
-    text-align: center;
-    line-height: .53rem;
-    color: #000000;
-    border-radius: .2rem;
-    border: 2px solid #090909;
-    background-color: #feb6cf;
-}
+
 
 /*分享浮层样式*/
 .fenxiang{
@@ -1070,10 +1048,10 @@ i{
     border: 4px solid #090909;
     background-color: #ffffff;
 }
-.fuli>div span{
+.fuli>div>span{
     position: absolute;
 }
-.fuli>div span:nth-child(1){
+.fuli>div>span:nth-child(1){
     top: .1rem;
     left: .1rem;
     width: .43rem;
@@ -1081,7 +1059,7 @@ i{
     background: url("../images/fuli_1.png") center no-repeat;
     background-size: cover;
 }
-.fuli>div span:nth-child(2){
+.fuli>div>span:nth-child(2){
     top: .25rem;
     right: .42rem;
     width: 1.55rem;
@@ -1105,62 +1083,122 @@ i{
     background: url("../images/fuli_7.png") center no-repeat;
     background-size: cover;
 }
-.fuli>div span:nth-child(5){
+.fuli>div div:nth-child(5){
     top: .48rem;
     left: 0;
     right: 0;
     margin: auto;
+    padding-top: 2.8rem;
     box-sizing: border-box;
-    width: 6.06rem;
-    height: .66rem;
-    font-size: .36rem;
+    width: 7rem;
+    height: 5.51rem;
+    background: url("../images/fuliBg.png") center no-repeat;
+    background-size: cover;
+}
+.fuli>div div:nth-child(5) p{
+    font-size: .4rem;
     text-align: center;
-    line-height: .66rem;
+    color: #000000;
+}
+.fuli>div div:nth-child(5) p:nth-child(2){
+    font-size: .22rem;
+    line-height: 1rem;
+}
+.fuli>div div:nth-child(5) p span{
+    font-size: .8rem;
+    color: #fc74a0;
+}
+.fuli>div span:nth-child(6){
+    top: 5.3rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 2.48rem;
+    height: .63rem;
+    font-size: .3rem;
+    text-align: center;
+    line-height: .63rem;
+    color: #000000;
+    border-radius: .2rem;
+    border: 2px solid #090909;
+    background-color: #ffe790;
+}
+.fuli>div div:nth-child(7){
+    position: relative;
+    margin: 1rem auto 0;
+    width: 5rem;
+    height: .35rem;
+    font-size: .34rem;
+    line-height: .35rem;
+    text-align: center;
+    color: #000000;
+}
+.fuli>div div:nth-child(7) span{
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    width: .96rem;
+    height: .02rem;
+    background-color: #090909;
+}
+.fuli>div div:nth-child(7) span:nth-child(1){
+    left: 0;
+}
+.fuli>div div:nth-child(7) span:nth-child(2){
+    right: 0;
+}
+.fuli>div ul:nth-child(8){
+    margin: .54rem auto 0;
+    width: 6.3rem;
+}
+.fuli>div ul:nth-child(8) li{
+    float: left;
+    margin-right: .25rem;
+}
+.fuli>div ul:nth-child(8) li:last-child{
+    margin-right: 0;
+}
+.fuli>div ul:nth-child(8) li span:nth-child(1){
+    display: block;
+    width: 1.92rem;
+    height: 1.74rem;
+}
+.fuli>div ul:nth-child(8) li:nth-child(1) span:nth-child(1){
+    background: url("../images/fuli_2.png") center no-repeat;
+    background-size: cover;
+}
+.fuli>div ul:nth-child(8) li:nth-child(2) span:nth-child(1){
+    background: url("../images/fuli_3.png") center no-repeat;
+    background-size: cover;
+}
+.fuli>div ul:nth-child(8) li:nth-child(3) span:nth-child(1){
+    background: url("../images/fuli_4.png") center no-repeat;
+    background-size: cover;
+}
+.fuli>div ul:nth-child(8) li span:nth-child(2){
+    display: block;
+    margin: .24rem auto 0;
+    width: 1.4rem;
+    height: .48rem;
+    border-radius: .2rem;
+    font-size: .2rem;
+    text-align: center;
+    line-height: .48rem;
     color: #000000;
     border: 2px solid #090909;
     background-color: #7cb6eb;
 }
-.fuli>div span:nth-child(6),.fuli>div span:nth-child(8),.fuli>div span:nth-child(10){
-    width: 6.26rem;
-    height: 1.79rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-.fuli>div span:nth-child(6){
-    top: 1.78rem;
-    background: url("../images/fuli_2.png") center no-repeat;
-    background-size: cover;
-}
-.fuli>div span:nth-child(8){
-    top: 4.82rem;
-    background: url("../images/fuli_3.png") center no-repeat;
-    background-size: cover;
-}
-.fuli>div span:nth-child(10){
-    top: 8rem;
-    background: url("../images/fuli_4.png") center no-repeat;
-    background-size: cover;
-}
-.fuli>div span:nth-child(7),.fuli>div span:nth-child(9),.fuli>div span:nth-child(11){
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 2.7rem;
-    height: .65rem;
-    font-size: .32rem;
-    text-align: center;
-    line-height: .65rem;
-    color: #ffffff;
+.fuli>div>a{
+    display: block;
+    margin: .3rem auto 0;
+    width: 3rem;
+    height: .7rem;
     border-radius: .2rem;
-    background-color: #7cb6eb;
-}
-.fuli>div span:nth-child(7){
-    top: 3.9rem;
-}
-.fuli>div span:nth-child(9){
-    top: 7rem;
-}
-.fuli>div span:nth-child(11){
-    top: 10.1rem;
+    font-size: .4rem;
+    text-align: center;
+    line-height: .7rem;
+    color: #000000;
+    border: 2px solid #090909;
+    background-color: #feb6cf;
 }

@@ -64,7 +64,9 @@
             'images/tc_4_icon.png',
             'images/laohuji.png',
             'images/numBox.png',
-            'images/0M.png',
+            'images/0M_1.png',
+            'images/0M_2.png',
+            'images/0M_3.png',
             'images/1GB.png',
             'images/100M.png',
             'images/200M.png',
@@ -86,6 +88,7 @@
             'images/tv_act.png',
             'images/watch.png',
             'images/xin.png',
+            'images/xin_.png',
             'images/xin_1.png',
             'images/xin_2.png'
         ], function (percentage) {
@@ -136,7 +139,7 @@
             </div>
         </div>
         <div></div>
-        <div>
+        <div id="change">
             <div>
                 <span id="starBtn"></span>
                 <i id="lookBtn">查看我的奖品</i>
@@ -242,13 +245,31 @@
         <span></span>
         <span></span>
         <span></span>
-        <span>快来领取福利</span>
-        <span></span>
-        <span>立即领取</span>
-        <span></span>
-        <span>立即领取</span>
-        <span></span>
-        <span>立即领取</span>
+        <div>
+            <p>北京移动送您<span>1GB</span>流量券<br>祝您情人节快乐~</p>
+            <p>已获奖品可去我的奖品页面领取</p>
+        </div>
+        <span id="yqBtn">呼唤小伙伴</span>
+        <div>
+            <span></span>
+            快来领取福利
+            <span></span>
+        </div>
+        <ul class="clear">
+            <li>
+                <span></span>
+                <span>立即领取</span>
+            </li>
+            <li>
+                <span></span>
+                <span>立即领取</span>
+            </li>
+            <li>
+                <span></span>
+                <span>立即领取</span>
+            </li>
+        </ul>
+        <a id="goFirPage" href="javascript:void (0)">回到首页</a>
     </div>
 </div>
 <!--分享遮罩层-->
@@ -263,8 +284,8 @@
 <div class="tc success" id="tc_success_1">
     <div>
         <div>
-            <p>解锁成功</p>
-            <p>恭喜你找到儿童手表，给宝宝带上，愉快地迎接下一关的挑战吧。</p>
+            <p></p>
+            <p>已装备儿童手表，随时与孩子沟通无压力！</p>
         </div>
         <div>
             <span></span>
@@ -281,8 +302,8 @@
 <div class="tc fail" id="tc_fail_1">
     <div>
         <div class="act">
-            <p>解锁失败</p>
-            <p>没有找到儿童手表，就差点运气呢，下一关我们江湖再见~</p>
+            <p></p>
+            <p>未能及时发现儿童手表，遗失了一个好装备！</p>
         </div>
         <div class="act">
             <span></span>
@@ -300,8 +321,8 @@
 <div class="tc success" id="tc_success_2">
     <div>
         <div>
-            <p>解锁成功</p>
-            <P>恭喜你成功开启咪咕电视，咪咕让孩子每天都有趣</P>
+            <p></p>
+            <P>咪咕电视已连接，孩子在家可享受电影院般的视听盛宴！</P>
         </div>
         <div>
             <span></span>
@@ -318,8 +339,8 @@
 <div class="tc fail" id="tc_fail_2">
     <div>
         <div class="act">
-            <p>解锁失败</p>
-            <p>很遗憾你没能打开咪咕电视，别放弃，机会就在下一关呢</p>
+            <p></p>
+            <p>很遗憾，你错过了一次看高清电视的好机会！</p>
         </div>
         <div class="act">
             <span></span>
@@ -337,8 +358,8 @@
 <div class="tc success" id="tc_success_3">
     <div>
         <div>
-            <p>解锁成功</p>
-            <p>恭喜你解锁魔百盒，千万/海量视频0卡顿，客厅也能尽享视听盛宴。</p>
+            <p></p>
+            <p>成功开启魔百盒，高清视频悉数网罗！</p>
         </div>
         <div>
             <span></span>
@@ -355,8 +376,8 @@
 <div class="tc fail" id="tc_fail_3">
     <div>
         <div class="act">
-            <p>解锁失败</p>
-            <p>很遗憾没有连线成功，下一关肯定难不倒你啦</p>
+            <p></p>
+            <p>连接失败，海量大片资源库已关闭！</p>
         </div>
         <div class="act">
             <span></span>
@@ -374,8 +395,8 @@
 <div class="tc success" id="tc_success_4">
     <div>
         <div>
-            <p>解锁成功</p>
-            <p>恭喜你找到和目摄像头，清晰夜视、异动监测，孩子动向尽在掌握。</p>
+            <p></p>
+            <p>恭喜你成功安装和目摄像头，孩子动向尽在掌握之中！</p>
         </div>
         <div>
             <span></span>
@@ -392,8 +413,8 @@
 <div class="tc fail" id="tc_fail_4">
     <div>
         <div class="act">
-            <p>解锁失败</p>
-            <p>没找到和目摄像头，那也没关系，我们去抽奖吧，好运爱你哦。</p>
+            <p></p>
+            <p>和目摄像头安装失败，你失去了看管孩子的主动权！</p>
         </div>
         <div class="act">
             <span></span>
@@ -412,7 +433,7 @@
     <div>
         <div>
             <div id="machine1" class="randomizeMachine">
-                <div><img src="./images/0M.png" alt="0M"></div>
+                <div><img src="./images/0M_1.png" alt="0M"></div>
                 <div><img src="./images/100M.png" alt="100M"></div>
                 <div><img src="./images/200M.png" alt="200M"></div>
                 <div><img src="./images/500M.png" alt="500M"></div>
@@ -420,7 +441,7 @@
                 <div><img src="./images/2.14G.png" alt="2.14G"></div>
             </div>
             <div id="machine2" class="randomizeMachine">
-                <div><img src="./images/0M.png" alt="0M"></div>
+                <div><img src="./images/0M_2.png" alt="0M"></div>
                 <div><img src="./images/100M.png" alt="100M"></div>
                 <div><img src="./images/200M.png" alt="200M"></div>
                 <div><img src="./images/500M.png" alt="500M"></div>
@@ -428,7 +449,7 @@
                 <div><img src="./images/2.14G.png" alt="2.14G"></div>
             </div>
             <div id="machine3" class="randomizeMachine">
-                <div><img src="./images/0M.png" alt="0M"></div>
+                <div><img src="./images/0M_3.png" alt="0M"></div>
                 <div><img src="./images/100M.png" alt="100M"></div>
                 <div><img src="./images/200M.png" alt="200M"></div>
                 <div><img src="./images/500M.png" alt="500M"></div>
@@ -437,12 +458,9 @@
             </div>
         </div>
         <span id="ranomizeButton"></span>
-        <p>北京移动祝您情人节快乐～</p>
-        <i>已获奖品可去我的奖品页面领取</i>
+        <i><!--已获奖品可去我的奖品页面领取--></i>
         <span id="lqBtn">立即领取</span>
     </div>
-    <div id="getMoreBtn">领取更多福利</div>
-    <div id="yqBtn">呼唤小伙伴</div>
 </div>
 </body>
 </html>

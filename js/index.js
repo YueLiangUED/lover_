@@ -14,6 +14,7 @@ $(function () {
         $xin_3 = $('#xin_3'),
         $info = $('#info'),
         $cgWrap = $('.cgWrap'),
+        $change = $('#change'),
         $title = $('#title'),
         $time = $('#time'),
         $hdgz = $('#hdgz'),
@@ -24,7 +25,6 @@ $(function () {
         $jpBtn = $('#jpBtn'),
         $ljTab = $('#ljTab'),
         $fuli = $('.fuli'),
-        $getMoreBtn = $('#getMoreBtn'),
         $yqBtn = $('#yqBtn'),
         $tc5lqBtn = $('#tc5lqBtn'),
         $barInner = $('.barInner'),
@@ -48,6 +48,7 @@ $(function () {
         $tc2NextBtn = $('.tc2NextBtn'),
         $tc3NextBtn = $('.tc3NextBtn'),
         $tc4Nextbtn = $('.tc4NextBtn');
+
     //待选择物品发光动画
     function light(ele) {
         timer_0 = window.setInterval(function () {
@@ -58,13 +59,25 @@ $(function () {
         },1000);
     }
     //首页动画
-    var timer1 = window.setTimeout(function () {
+    timer_fir = window.setInterval(function () {
         $xin_1.fadeIn(function () {
             $xin_2.fadeIn(function () {
                 $xin_3.addClass('act');
+                window.setTimeout(function () {
+                    $xin_3.find('img').attr('src',"./images/xin_.png");
+                    $change.addClass('bg');
+                    /*$xin_1.hide();
+                       $xin_2.hide();*/
+                },500);
             });
         });
-    },1000);
+        //$xin_1.fadeIn();
+        //$xin_2.fadeIn();
+        //$xin_3.removeClass('act');
+        $xin_3.find('img').attr('src',"./images/xin.png");
+        $change.removeClass('bg');
+        $xin_3.addClass('act');
+    },2000);
     //首页活动规则
     $hdgz.on('click',function () {
         $info.hide();
@@ -92,29 +105,28 @@ $(function () {
     //弹窗5立即领取按钮点击置灰
     $tc5lqBtn.on('click',function () {
         $(this).addClass('act');
-    });
-    //弹窗5领取更多福利按钮
-    $getMoreBtn.on('click',function () {
-        $cgWrap.hide();
-        $('.lev5Tc').hide();
-        hideMask();
-        $fuli.show();
+
     });
     //弹窗5分享按钮
     $yqBtn.on('click',function () {
-        $('.lev5Tc').hide();
         $('.fenxiang').show();
+        showMask();
     });
     //分享确认按钮
     $('#fxqr').on('click',function () {
         $('.fenxiang').hide();
         hideMask();
+        $fuli.hide();
+        window.location.href = 'index.html';
+    });
+    //福利页回到首页
+    $('#goFirPage').on('click',function () {
         window.location.href = 'index.html';
     });
     function titleAnimate() {
         setTimeout(function () {
             $title.css({
-                transform: 'rotate(5deg)'
+                transform: 'rotate(3deg)'
             });
             setTimeout(function () {
                 $title.css({
@@ -122,7 +134,7 @@ $(function () {
                 });
                 setTimeout(function () {
                     $title.css({
-                        transform: 'rotate(-5deg)'
+                        transform: 'rotate(-3deg)'
                     });
                     setTimeout(function () {
                         $title.css({
@@ -138,7 +150,7 @@ $(function () {
     $starBtn.on('click',function () {
         $info.hide();
         $cgWrap.show();
-        window.clearTimeout(timer1);
+        window.clearTimeout(timer_fir);
         light($watch);
         timing();
         titleAnimate();
@@ -197,6 +209,7 @@ $(function () {
                 timeInit();
                 flag = 2;
                 $openTv.show();
+                $tv.remove();
                 var timer3 = setInterval(function () {
                     $openTv.addClass('act');
                     var timer4 = setTimeout(function () {
@@ -642,6 +655,10 @@ $(function () {
     });
     $lqBtn.on('click',function () {
         if($(this).hasClass('act')){
+            $('.lev5Tc').hide();
+            hideMask();
+            $cgWrap.hide();
+            $fuli.show();
             $lqBtn.text('已领取');
             $(this).removeClass('act');
         }
