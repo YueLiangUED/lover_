@@ -103,7 +103,7 @@ $(function () {
     function titleAnimate() {
         setTimeout(function () {
             $title.css({
-                transform: 'rotate(10deg)'
+                transform: 'rotate(5deg)'
             });
             setTimeout(function () {
                 $title.css({
@@ -111,7 +111,7 @@ $(function () {
                 });
                 setTimeout(function () {
                     $title.css({
-                        transform: 'rotate(-10deg)'
+                        transform: 'rotate(-5deg)'
                     });
                     setTimeout(function () {
                         $title.css({
@@ -134,19 +134,19 @@ $(function () {
     //第一关倒计时
     var timing = function () {
         var timeBarInit = 100,
-            timeBarStep = 5,
+            timeBarStep = 10,
             timeBarWidth,
             i = 0;
         timer2_1 = window.setInterval(function () {
-            if(i < 19){
+            if(i < 9){
                 i+= 1;
-                if(i > 14){
+                if(i > 4){
                     $barInner.css("background","red");
                 }
                 timeBarWidth = timeBarInit - timeBarStep*i;
                 $barInner.width(timeBarWidth + "%");
-                $time.text(20 - i);
-            }else if(i = 19){
+                $time.text(10 - i);
+            }else if(i = 9){
                 $time.text(0);
                 $title.addClass('act_2');
                 $watch.hide();
@@ -163,19 +163,19 @@ $(function () {
     //第二关倒计时
     var timing1 = function () {
         var timeBarInit = 100,
-            timeBarStep = 5,
+            timeBarStep = 10,
             timeBarWidth,
             i = 0;
         timer2_2 = window.setInterval(function () {
-            if(i < 19){
+            if(i < 9){
                 i+= 1;
-                if(i > 14){
+                if(i > 4){
                     $barInner.css("background","red");
                 }
                 timeBarWidth = timeBarInit - timeBarStep*i;
                 $barInner.width(timeBarWidth + "%");
-                $time.text(20 - i);
-            }else if(i = 19){
+                $time.text(10 - i);
+            }else if(i = 9){
                 $time.text(0);
                 $title.addClass('act_3');
                 $barInner.hide();
@@ -197,19 +197,19 @@ $(function () {
     //第三关倒计时
     var timing2 = function () {
         var timeBarInit = 100,
-            timeBarStep = 5,
+            timeBarStep = 10,
             timeBarWidth,
             i = 0;
         timer2_3 = window.setInterval(function () {
-            if(i < 19){
+            if(i < 9){
                 i+= 1;
-                if(i > 14){
+                if(i > 4){
                     $barInner.css("background","red");
                 }
                 timeBarWidth = timeBarInit - timeBarStep*i;
                 $barInner.width(timeBarWidth + "%");
-                $time.text(20 - i);
-            }else if(i = 19){
+                $time.text(10 - i);
+            }else if(i = 9){
                 $time.text(0);
                 $barInner.hide();
                 $title.addClass('act_4');
@@ -228,19 +228,19 @@ $(function () {
     //第四关倒计时
     var timing3 = function () {
         var timeBarInit = 100,
-            timeBarStep = 5,
+            timeBarStep = 10,
             timeBarWidth,
             i = 0;
         timer2_4 = window.setInterval(function () {
-            if(i < 19){
+            if(i < 9){
                 i+= 1;
-                if(i > 14){
+                if(i > 4){
                     $barInner.css("background","red");
                 }
                 timeBarWidth = timeBarInit - timeBarStep*i;
                 $barInner.width(timeBarWidth + "%");
-                $time.text(20 - i);
-            }else if(i = 19){
+                $time.text(10 - i);
+            }else if(i = 9){
                 $time.text(0);
                 $title.addClass('act_5');
                 $barInner.hide();
@@ -256,19 +256,19 @@ $(function () {
     //第五关倒计时
     var timing4 = function () {
         var timeBarInit = 100,
-            timeBarStep = 5,
+            timeBarStep = 10,
             timeBarWidth,
             i = 0;
         timer2_5 = window.setInterval(function () {
-            if(i < 19){
+            if(i < 9){
                 i+= 1;
-                if(i > 14){
+                if(i > 4){
                     $barInner.css("background","red");
                 }
                 timeBarWidth = timeBarInit - timeBarStep*i;
                 $barInner.width(timeBarWidth + "%");
-                $time.text(20 - i);
-            }else if(i = 19){
+                $time.text(10 - i);
+            }else if(i = 9){
                 $time.text(0);
                 $barInner.hide();
                 $lev4Bg.hide();
@@ -288,7 +288,7 @@ $(function () {
     }
     //重置倒计时时间及进度条
     function timeInit() {
-        $('#time').text(20);
+        $('#time').text(10);
         $barInner.width(100+"%");
         $barInner.css('background','#fef979');
         $barInner.show();
@@ -413,7 +413,7 @@ $(function () {
             $('#tc_success_1').show();
             showMask();
             flag = 1;
-        },2000);
+        },1000);
 
     }
     //显示第一关失败弹窗
@@ -427,7 +427,7 @@ $(function () {
             $('#tc_success_2').show();
             showMask();
             flag = 2;
-        },2000);
+        },1000);
     }
     //显示第二关失败弹窗
     function showTc_fail_2() {
@@ -440,7 +440,7 @@ $(function () {
             $('#tc_success_3').show();
             showMask();
             flag = 3;
-        },2000);
+        },1000);
     }
     //显示第三关失败弹窗
     function showTc_fail_3() {
@@ -452,7 +452,7 @@ $(function () {
         setTimeout(function () {
             $('#tc_success_4').show();
             showMask();
-        },2000);
+        },1000);
     }
     //显示第四关失败弹窗
     function showTc_fail_4() {
