@@ -313,6 +313,24 @@ section#info footer>div:nth-child(3) div span{
     background: url("../images/door.png") center no-repeat;
     background-size: cover;
 }
+.cgWrap>div:nth-child(1) footer span:nth-child(2) i{
+    position: absolute;
+    left: .19rem;
+    top: 3.3rem;
+    width: .1rem;
+    height: .1rem;
+    border-radius: 50%;
+}
+.cgWrap>div:nth-child(1) footer span:nth-child(2) i.bg{
+    background-color: rgba(255,255,94,.9);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px rgba(255,255,94,.9);
+}
+.cgWrap>div:nth-child(1) footer span:nth-child(2) i.bg_1{
+    background-color: rgba(255,255,94,.9);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 10px rgba(255,255,94,.9);
+}
 .cgWrap>div:nth-child(1) footer span:nth-child(1){
     bottom: -1px;
     left: -1px;
@@ -349,6 +367,19 @@ section#info footer>div:nth-child(3) div span{
     width: 1.99rem;
     height: 1.09rem;
 }
+.cgWrap>div:nth-child(1) footer span:nth-child(4) a{
+    position: absolute;
+    bottom: 1.27rem;
+    right: .3rem;
+    width: 1.99rem;
+    height: 1.09rem;
+}
+.cgWrap>div:nth-child(1) footer span:nth-child(4) a.bg{
+    box-shadow: 0px 0px 5px 5px rgba(255,255,94,.9);
+}
+.cgWrap>div:nth-child(1) footer span:nth-child(4) a.bg{
+    box-shadow: 0px 0px 10px 10px rgba(255,255,94,.9);
+}
 .cgWrap>div:nth-child(1) footer span:nth-child(4) i{
     background: url("../images/open_tv_1.png") center no-repeat;
     background-size: cover;
@@ -381,6 +412,16 @@ section#info footer>div:nth-child(3) div span{
     background: url("../images/box_1.png") center no-repeat;
     background-size: cover;
 }
+.cgWrap>div:nth-child(1) footer span:nth-child(6).bg{
+    background-color: rgba(255,255,94,.9);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px rgba(255,255,94,.9);
+}
+.cgWrap>div:nth-child(1) footer span:nth-child(6).bg_1{
+    background-color: rgba(255,255,94,.9);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 10px rgba(255,255,94,.9);
+}
 .cgWrap>div:nth-child(1) footer span:nth-child(7){
     left: 2.2rem;
     bottom: 2.62rem;
@@ -388,6 +429,16 @@ section#info footer>div:nth-child(3) div span{
     height: .29rem;
     background: url("../images/watch.png") center no-repeat;
     background-size: cover;
+}
+.cgWrap>div:nth-child(1) footer span:nth-child(7).bg{
+    background-color: rgba(255,255,94,.9);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px rgba(255,255,94,.9);
+}
+.cgWrap>div:nth-child(1) footer span:nth-child(7).bg_1{
+    background-color: rgba(255,255,94,.9);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 10px rgba(255,255,94,.9);
 }
 .cgWrap>div:nth-child(1) footer span:nth-child(8){
     bottom: 3.22rem;
@@ -435,6 +486,16 @@ section#info footer>div:nth-child(3) div span{
     height: .62rem;
     background: url("../images/sxt_1.png") center no-repeat;
     background-size: cover;
+}
+.cgWrap>div:nth-child(1) footer span:nth-child(10) i.bg{
+    background-color: rgba(255,255,94,.9);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px rgba(255,255,94,.9);
+}
+.cgWrap>div:nth-child(1) footer span:nth-child(10) i.bg_1{
+    background-color: rgba(255,255,94,.9);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 10px rgba(255,255,94,.9);
 }
 .cgWrap>div:nth-child(1) footer span:nth-child(11){
     display: none;

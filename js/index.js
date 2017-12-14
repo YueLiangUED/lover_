@@ -33,6 +33,7 @@ $(function () {
         $watch = $('#watch'),
         $box = $('#box'),
         $tv = $('#tv'),
+        $tvWrap = $('#tvWrap'),
         $openTv = $('#openTv'),
         $num = $('#num'),
         flag = 0,
@@ -42,10 +43,20 @@ $(function () {
         $lev5Girl = $('#lev5Girl'),
         $lev5Man = $('#lev5Man'),
         $door = $('#door'),
+        $doorLight = $('#doorLight'),
         $tc1NextBtn = $('.tc1NextBtn'),
         $tc2NextBtn = $('.tc2NextBtn'),
         $tc3NextBtn = $('.tc3NextBtn'),
         $tc4Nextbtn = $('.tc4NextBtn');
+    //待选择物品发光动画
+    function light(ele) {
+        timer_0 = window.setInterval(function () {
+            ele.removeClass('bg_1').addClass('bg');
+            setTimeout(function () {
+                ele.removeClass('bg').addClass('bg_1');
+            },500);
+        },1000);
+    }
     //首页动画
     var timer1 = window.setTimeout(function () {
         $xin_1.fadeIn(function () {
@@ -128,6 +139,7 @@ $(function () {
         $info.hide();
         $cgWrap.show();
         window.clearTimeout(timer1);
+        light($watch);
         timing();
         titleAnimate();
     });
@@ -215,7 +227,7 @@ $(function () {
                 $title.addClass('act_4');
                 showTc_fail_3();
                 $openTv.hide();
-                $tv.addClass('act');
+                $tvWrap.addClass('act');
                 $box.hide();
                 $girl_1.addClass('act_1');
                 window.clearInterval(timer2_3);
@@ -279,6 +291,8 @@ $(function () {
                 window.clearInterval(timer5);
                 window.clearInterval(timer6);
                 window.clearInterval(timer2_5);
+                window.clearInterval(timer_0);
+                $doorLight.remove();
                 i = 0;
                 titleAnimate = null;
                 timeInit();
@@ -312,6 +326,7 @@ $(function () {
         $title.addClass('act_2');
         $num.text(2);
         timing1();
+        light($tv);
     });
     //第二关 点击电视
     $tv.on('click',function () {
@@ -326,6 +341,7 @@ $(function () {
                 },500);
             },1000);
             showTc_success_2();
+            $tv.remove();
         }
     });
     //第二关弹窗下一步按钮
@@ -336,13 +352,14 @@ $(function () {
         $title.addClass('act_3');
         $num.text(3);
         timing2();
+        light($box);
     });
     //第三关点击魔百盒
     $box.on('click',function () {
         if(flag === 2){
             window.clearInterval(timer2_3);
             $openTv.hide();
-            $tv.addClass('act');
+            $tvWrap.addClass('act');
             $(this).hide();
             $girl_1.addClass('act_1');
             showTc_success_3();
@@ -358,6 +375,7 @@ $(function () {
         $num.text(4);
         $lev4Bg.show();
         timing3();
+        light($sxt);
     });
     //第四关点击摄像头
     $sxt.on('click',function () {
@@ -366,6 +384,7 @@ $(function () {
             $lev4.addClass('act');
             window.clearInterval(timer2_4);
             showTc_success_4();
+            $sxt.remove();
         }
     });
     //第四关点击弹窗下一步按钮
@@ -387,6 +406,7 @@ $(function () {
         hideTc_fail_4();
         $num.text(5);
         timing4();
+        light($doorLight);
     });
     //第五关点击门
     $door.on('click',function () {
@@ -403,6 +423,8 @@ $(function () {
             window.clearInterval(timer2_5);
             titleAnimate = null;
             timeInit();
+            window.clearInterval(timer_0);
+            $doorLight.remove();
         }
     });
 
