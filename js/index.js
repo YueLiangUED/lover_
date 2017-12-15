@@ -183,7 +183,7 @@ $(function () {
                 timeInit();
                 flag = 1;
             }
-        },500);
+        },1000);
     }
     //第二关倒计时
     var timing1 = function () {
@@ -463,7 +463,7 @@ $(function () {
             $('#tc_success_2').show();
             showMask();
             flag = 2;
-        },1000);
+        },500);
     }
     //显示第二关失败弹窗
     function showTc_fail_2() {
@@ -476,7 +476,7 @@ $(function () {
             $('#tc_success_3').show();
             showMask();
             flag = 3;
-        },1000);
+        },500);
     }
     //显示第三关失败弹窗
     function showTc_fail_3() {
@@ -488,7 +488,7 @@ $(function () {
         setTimeout(function () {
             $('#tc_success_4').show();
             showMask();
-        },1000);
+        },500);
     }
     //显示第四关失败弹窗
     function showTc_fail_4() {
