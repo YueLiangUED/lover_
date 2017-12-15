@@ -632,24 +632,27 @@ $(function () {
     $("#ranomizeButton").one('click',function () {
         $cishu.text(0);
         $(this).addClass('act');
-        machine1.shuffle(10);
+        machine1.shuffle(10,function () {
+            if(machine1.active === 1){
+                $jp.text('100MB');
+            }else if(machine1.active ===2 ){
+                $jp.text('200MB');
+            }else if(machine1.active ===3){
+                $jp.text('500MB');
+            }else if(machine1.active ===4){
+                $jp.text('1GB');
+            }else if(machine1.active ===5){
+                $jp.text('2.14GB');
+            }
+        });
         machine2.shuffle(15);
         machine3.shuffle(20);
         $('.randomizeMachine').css('padding-top','0.03rem');
 
         //显示抽奖结果
         //@param machine1.active 当前选中索引
-        if(machine1.active === 0){
-            $jp.text('100MB');
-        }else if(machine1.active ===1 ){
-            $jp.text('200MB');
-        }else if(machine1.active ===2){
-            $jp.text('500MB');
-        }else if(machine1.active ===3){
-            $jp.text('1GB');
-        }else if(machine1.active ===4){
-            $jp.text('2.14GB');
-        }
+
+
     });
     window.setInterval(function () {
         if(machine3.stopping){
