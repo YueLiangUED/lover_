@@ -79,6 +79,19 @@ $(function () {
         $change.removeClass('bg');
         $xin_3.addClass('act');
     },2000);
+    //首页按钮放大缩小
+    var $starBtnImg = $starBtn.find('img');
+    timer_btn = window.setInterval(function () {
+        $starBtnImg.animate({
+            width: '90%',
+            height: '90%'
+        },function () {
+            $starBtnImg.animate({
+                width: '100%',
+                height: '100%'
+            });
+        });
+    },1000);
     //首页活动规则
     $hdgz.on('click',function () {
         $info.hide();
@@ -151,7 +164,8 @@ $(function () {
     $starBtn.on('click',function () {
         $info.hide();
         $cgWrap.show();
-        window.clearTimeout(timer_fir);
+        window.clearInterval(timer_fir);
+        window.clearInterval(timer_btn);
         light($watch);
         timing();
         titleAnimate();

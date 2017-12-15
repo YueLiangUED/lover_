@@ -246,12 +246,27 @@ section#info footer>div:nth-child(3) div{
     text-align: center;
 }
 section#info footer>div:nth-child(3) div span{
-    display: block;
-    margin-bottom: .1rem;
+    position: absolute;
+    bottom: .7rem;
+    left: 0;
+    right: 0;
+    margin: auto;
     width: 3.24rem;
     height: .9rem;
-    background: url("../images/firBtnBg.png") center no-repeat;
-    background-size: cover;
+    /*background: url("../images/firBtnBg.png") center no-repeat;
+    background-size: cover;*/
+}
+section#info footer>div:nth-child(3) div span img{
+    width: 100%;
+    height: 100%;
+}
+section#info footer>div:nth-child(3) div i:last-child{
+    position: absolute;
+    bottom: .2rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 1.6rem;
 }
 /*闯关背景*/
 .cgWrap{
@@ -612,9 +627,6 @@ i{
     text-align: center;
     line-height: 1.2rem;
     color: #da4027;
-}
-.myJp>div:nth-child(1) h2{
-    color: #7cb6eb;
 }
 .hdgz>div:nth-child(1) h3{
     font-size: .32rem;
@@ -1090,7 +1102,7 @@ i{
 }
 .fuli>div div:nth-child(7){
     position: relative;
-    margin: -.6rem auto 0;
+    margin: -1rem auto 0;
     width: 5rem;
     height: .35rem;
     font-size: .34rem;
@@ -1127,7 +1139,7 @@ i{
 .fuli>div ul:nth-child(8) li span:nth-child(1){
     display: block;
     width: 1.92rem;
-    height: 1.74rem;
+    height: 2rem;
 }
 .fuli>div ul:nth-child(8) li:nth-child(1) span:nth-child(1){
     background: url("../images/fuli_2.png") center no-repeat;
