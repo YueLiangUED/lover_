@@ -43,6 +43,7 @@ $(function () {
         $lev5Girl = $('#lev5Girl'),
         $lev5Man = $('#lev5Man'),
         $door = $('#door'),
+        $jp = $('#jp'),
         $doorLight = $('#doorLight'),
         $tc1NextBtn = $('.tc1NextBtn'),
         $tc2NextBtn = $('.tc2NextBtn'),
@@ -529,6 +530,7 @@ $(function () {
         $('#tc_success_4').hide();
         hideMask();
     }
+
     //关闭第四关失败弹窗
     function hideTc_fail_4() {
         $('#tc_fail_4').hide();
@@ -629,6 +631,7 @@ $(function () {
 
     $("#ranomizeButton").one('click',function () {
         $cishu.text(0);
+        $(this).addClass('act');
         machine1.shuffle(10);
         machine2.shuffle(15);
         machine3.shuffle(20);
@@ -637,13 +640,15 @@ $(function () {
         //显示抽奖结果
         //@param machine1.active 当前选中索引
         if(machine1.active === 0){
-
+            $jp.text('100MB');
         }else if(machine1.active ===1 ){
-
+            $jp.text('200MB');
         }else if(machine1.active ===2){
-
+            $jp.text('500MB');
         }else if(machine1.active ===3){
-
+            $jp.text('1GB');
+        }else if(machine1.active ===4){
+            $jp.text('2.14GB');
         }
     });
     window.setInterval(function () {
@@ -656,6 +661,7 @@ $(function () {
     $lqBtn.on('click',function () {
         if($(this).hasClass('act')){
             $('.lev5Tc').hide();
+            $info.hide();
             hideMask();
             $cgWrap.hide();
             $fuli.show();
