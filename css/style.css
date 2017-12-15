@@ -1150,7 +1150,7 @@ i{
     text-align: center;
     line-height: .48rem;
     color: #000000;
-    border: 2px solid #090909;
+    border: 1px solid #090909;
     background-color: #7cb6eb;
 }
 .fuli>div>a{
@@ -1164,7 +1164,7 @@ i{
     text-align: center;
     line-height: .65rem;
     color: #ffffff;
-    background-color: #feb6cf;
+    background-color: #fc74a0;
 }
 .fuli>div>a:last-child{
     left: inherit;

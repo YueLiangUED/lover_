@@ -183,7 +183,7 @@ $(function () {
                 timeInit();
                 flag = 1;
             }
-        },1000);
+        },500);
     }
     //第二关倒计时
     var timing1 = function () {
@@ -449,7 +449,7 @@ $(function () {
             $('#tc_success_1').show();
             showMask();
             flag = 1;
-        },1000);
+        },500);
 
     }
     //显示第一关失败弹窗
